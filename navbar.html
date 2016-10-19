@@ -1,0 +1,26 @@
+<div class="col-lg-3 navbar-template">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{mode}} <span class="badge">{{difficulties}}</span></h3>
+
+			<br>
+			<a ng-click="easy()" class="btn btn-info" ng-hide="hideDifficultiesBtn">Easy</a>
+			<a ng-click="medium()" class="btn btn-info" ng-hide="hideDifficultiesBtn">Medium</a>
+			<a ng-click="hard()" class="btn btn-info" ng-hide="hideDifficultiesBtn">Hard</a>
+		</div>
+		<div class="panel-body" ng-show="showCardType">
+			<a ng-click="colors()" class="btn btn-primary btn-block" ng-hide="hideCardTypeBtn">Colors</a>
+			<a ng-click="logos()" class="btn btn-info btn-block" ng-hide="hideCardTypeBtn">Logos</a>
+			<a ng-click="numbers()" class="btn btn-success btn-block" ng-hide="hideCardTypeBtn">Numbers</a>
+			<a ng-click="pokers()" class="btn btn-default btn-block" ng-hide="hideCardTypeBtn">Pokers</a>
+
+			<img ng-src="img/cards/{{filename}}" alt="" class="img-responsive" ng-show="showCardTypeImage" style="margin: 0 auto;" />
+			<a ng-click="start()" class="btn btn-lg btn-default btn-block" ng-show="showStartBtn">Start</a>
+		</div>
+		<div class="panel-footer" ng-show="showOtherBtn">
+			<a ng-click="showInfo()" class="btn btn-primary btn-block"><span class="fa fa-info"></span></a>
+			<!-- <a ng-click="exit()" class="btn btn-primary btn-block"><span class="fa fa-times"></span></a> -->
+			<a ng-click="restart()" class="btn btn-primary btn-block"><span class="fa fa-refresh"></span></a>
+		</div>
+	</div>
+</div>

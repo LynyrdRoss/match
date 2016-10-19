@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<nav-bar ng-style="navbarStyle"></nav-bar>
+
+		<div class="col-lg-9">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<div class="time-attack">
+							<span class="fa fa-clock-o"></span> <b id="time-attack">00:00:00</b>
+						</div>	
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div ng-Repeat="card in cards">
+						<a class="flip3d" ng-click="flip($event)" data-index="{{card.index}}">
+							<img src="img/cards/logos/logo1.png" alt="" class="img-responsive back" />
+							<img src="img/cards/back-card.png" alt="" class="img-responsive front" />
+						</a>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<div class="mini-bar">
+						<strong>Guess Number: {{guess_number}}</strong><br>
+						<strong>Score: {{score}}</strong><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
